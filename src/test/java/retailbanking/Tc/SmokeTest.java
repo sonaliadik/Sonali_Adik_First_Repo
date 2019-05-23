@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import core.utils.Utils;
 import retailbanking.Po.Po_Common;
 import retailbanking.Po.Po_Login;
+import retailbanking.Po.Po_PayBills;
 import retailbanking.Po.Po_TransferFunds;
 
 public class SmokeTest {
@@ -17,7 +18,7 @@ public class SmokeTest {
 	@Test
 	public void t_01_check_login(String url,String browserType) {
 		try {
-			//String url = "http://zero.webappsecurity.com/login.html";
+			url = "http://zero.webappsecurity.com/login.html";
 			WebDriver driver = Utils.InvokeBrowser(browserType, url);
 
 			//Init Page Object
@@ -59,7 +60,27 @@ public class SmokeTest {
 	//<parameter name="url_parabank" value="http://parabank.parasoft.com/parabank/index.htm" />/
 	//@Parameters({"url_icici"})
 	//@Test(groups="smoke",description="Smoke Test For Search funtionality",enabled=true)
-}
+	@Parameters({"url","browser"})
+	@Test
+	public void Tc03_validate_PayBills(String url,String browserType)  {
+		WebDriver driver = Utils.InvokeBrowser(browserType, url);
+		//Init Page Object
+		Po_Login Po_Login = PageFactory.initElements(driver, Po_Login.class);
+		Po_Login.KW_LoginInToApplication("username", "password");
+		//Pay_Bills
+		Po_PayBills Po_paybills= PageFactory.initElements(driver, Po_PayBills.class);
+		String Payee = " Bank of America";
+		String Account = "2";
+		String Amount = "2000";
+		String Date = "2018-10-04";
+		String Desc="Selenium Script";
+		Po_paybills.KW_Fill_Pay_BillsAndSubmit(Payee, Account, Amount, Date,Desc);
+		Utils.WriteLogs("pass","Test Case completed");
+		
+	}
+	}
+	
+
 
 
 
