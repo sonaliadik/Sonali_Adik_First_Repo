@@ -38,7 +38,7 @@
 				<configuration>
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/Driver_TestNG.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/DriverTestNG.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
