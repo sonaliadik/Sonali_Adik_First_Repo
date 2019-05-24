@@ -63,6 +63,7 @@ public class SmokeTest {
 	@Parameters({"url","browser"})
 	@Test
 	public void Tc03_validate_PayBills(String url,String browserType)  {
+		//url = "http://zero.webappsecurity.com/login.html";
 		WebDriver driver = Utils.InvokeBrowser(browserType, url);
 		//Init Page Object
 		Po_Login Po_Login = PageFactory.initElements(driver, Po_Login.class);
