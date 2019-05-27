@@ -12,7 +12,7 @@ public class Po_Common {
 		WebDriver driver;
 
 		//Step: Paramatrized constructor
-		public  Po_Common(WebDriver d) {
+		public Po_Common(WebDriver d) {
 			driver = d;
 		}
 
@@ -29,5 +29,5 @@ public class Po_Common {
 				Utils.WriteLogs("fail","Unable to Click on Transfer Funds. Exception: " + e.toString());
 			}
 		}
-
+		
 }

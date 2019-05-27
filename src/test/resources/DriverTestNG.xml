@@ -6,7 +6,7 @@
   <test name="TestOnChrome">
   <parameter name = "browser" value = "chrome"/>
     <classes>
-      <class name="retailbanking.tc.SmokeTest"/>
+      <class name="retailbanking.Tc.SmokeTest1"/>
 
     </classes>
   </test> 
@@ -14,7 +14,7 @@
   <test name="TestOnFirefox">
   <parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="retailbanking.tc.SmokeTest"/>
+      <class name="retailbanking.tc.SmokeTest1"/>
 
     </classes>
   </test> 

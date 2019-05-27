@@ -131,5 +131,4 @@ WebDriver driver;
 			e.printStackTrace();
 			Utils.WriteLogs("fail","Unable to Fill transsfer funds and Submit page: " + e.toString());
 		}
-	}
-}
+	}}
