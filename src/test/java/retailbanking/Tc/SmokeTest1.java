@@ -72,6 +72,9 @@ public class SmokeTest1 {
 		//Init Page Object
 		Po_Login Po_Login = PageFactory.initElements(driver, Po_Login.class);
 		Po_Login.KW_LoginInToApplication("username", "password");
+		//click on pay bills
+		Po_Common PO_Common = PageFactory.initElements(driver, Po_Common.class);
+        PO_Common.ClickOnPay();
 		//Pay_Bills
 		Po_PayBills Po_paybills= PageFactory.initElements(driver, Po_PayBills.class);
 		String Payee = " Bank of America";
